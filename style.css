@@ -1,0 +1,139 @@
+
+  /* Base Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* Search Container */
+  .search-container {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+  
+  #movie {
+    padding: 12px 15px;
+    width: 70%;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+  }
+  
+  #movie:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 2px 10px rgba(74, 144, 226, 0.3);
+  }
+  
+  button {
+    padding: 12px 25px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+  }
+  
+  /* Results Container */
+  #movie-container {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    /* margin: 0 auto; */
+  }
+  
+  /* Movie Card */
+  #parent {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  #parent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  #parent img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  #parent div {
+    padding: 15px;
+  }
+  
+  #parent p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  #parent p:first-child {
+    font-weight: bold;
+    font-size: 16px;
+    color: #222;
+  }
+  
+  /* Error/No Results Styling */
+  .error-container {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .error-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .error-container img {
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .search-container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    #movie {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    button {
+      margin-left: 0;
+      width: 100%;
+    }
+    
+    #movie-container {
+      grid-template-columns: 1fr;
+    }
+  }
