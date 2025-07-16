@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>OMDB Movie</h1>
-    <input  id="movie" placeholder="enter movie name...">
+    <input id="movie" placeholder="enter movie name...">
     <button onclick="getData()">Search</button>
+    <div>
+        <select id="sort" onchange="handleSort()">
+            <option value="">Sort by</option>
+            <option value="asc">Oldest</option>
+            <option value="dsc">Latest</option>
+        </select>
+        <select id="type" onchange="handleTypeFilter()">
+            <option value="">Filter by Type</option>
+            <option value="movie">Movies</option>
+            <option value="series">Series</option>
+            <option value="game">Game</option>
+        </select>
+    </div>
     <div id="movie-container">
 
+    </div>
+    <div id="pagination">
+     
     </div>
 </body>
 <script src="index.js
 "></script>
+
 </html>
